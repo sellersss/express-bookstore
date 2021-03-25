@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [{
+    "isbn": "0691161518",
+    "amazon_url": "http://a.co/eobPtX2",
+    "author": "Matthew Lane",
+    "language": "english",
+    "pages": 264,
+    "publisher": "Princeton University Press",
+    "title": "Power-Up: Unlocking the Hidden Mathematics in Video Games",
+    "year": 2017
+  }],
+  "required": [
+    "isbn",
+    "amazon_url",
+    "author",
+    "language",
+    "pages",
+    "publisher",
+    "title",
+    "year"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "isbn": {
+      "$id": "#/properties/isbn",
+      "type": "string",
+      "title": "The isbn schema",
+      "description": "What is the isbn for this book?",
+      "default": "",
+      "examples": [
+        "0691161518"
+      ]
+    },
+    "amazon_url": {
+      "$id": "#/properties/amazon_url",
+      "type": "string",
+      "title": "The amazon_url schema",
+      "description": "Amazon url for this book",
+      "default": "",
+      "examples": [
+        "http://a.co/eobPtX2"
+      ]
+    },
+    "author": {
+      "$id": "#/properties/author",
+      "type": "string",
+      "title": "The author schema",
+      "description": "Who is the book author?",
+      "default": "",
+      "examples": [
+        "Matthew Lane"
+      ]
+    },
+    "language": {
+      "$id": "#/properties/language",
+      "type": "string",
+      "title": "The language schema",
+      "description": "In what language was this written?",
+      "default": "",
+      "examples": [
+        "english"
+      ]
+    },
+    "pages": {
+      "$id": "#/properties/pages",
+      "type": "integer",
+      "title": "The pages schema",
+      "description": "How many pages does this book have?",
+      "default": 0,
+      "examples": [
+        264
+      ]
+    },
+    "publisher": {
+      "$id": "#/properties/publisher",
+      "type": "string",
+      "title": "The publisher schema",
+      "description": "Who published this book?",
+      "default": "",
+      "examples": [
+        "Princeton University Press"
+      ]
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "title": "The title schema",
+      "description": "Title of this book?",
+      "default": "",
+      "examples": [
+        "Power-Up: Unlocking the Hidden Mathematics in Video Games"
+      ]
+    },
+    "year": {
+      "$id": "#/properties/year",
+      "type": "integer",
+      "title": "The year schema",
+      "description": "What year was this book published?",
+      "default": 0,
+      "maximum": 2021,
+      "examples": [
+        2017
+      ]
+    }
+  }
+}
